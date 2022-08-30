@@ -1,0 +1,1 @@
+wp.customize.controlConstructor['multiple-checkbox']=wp.customize.Control.extend({ready:function(){const control=this;control.container.on('change','input',function(){const value=[];let i=0;jQuery.each(control.params.choices,function(key){if(control.container.find('input[value="'+key+'"]').is(':checked')){value[i]=key;i++;}});control.setting.set(value);});},});
